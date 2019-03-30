@@ -8,3 +8,7 @@ a public/private key pair.
 Written in markdown for the [mmark processor](https://github.com/mmarkdown/mmark).
 
 Compiling: `mmark -2 main.md > draft.xml; xml2rfc --legacy --html draft.xml`
+
+Or use docker-packaged tools:
+
+`docker run -it -v $(pwd):/root dwaite/rfc-tools mmark -2 main.md > draft.xml;docker run -it -v $(pwd):/root dwaite/rfc-tools xml2rfc --legacy draft.xml --html`
